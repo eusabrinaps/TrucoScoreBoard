@@ -38,35 +38,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="40sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/TeamA"
         app:layout_constraintStart_toStartOf="@id/TeamA"
         app:layout_constraintEnd_toEndOf="@id/TeamA" />
-
-    <Button
-        android:id="@+id/btnIncrement1A"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="+1"
-        android:textSize="20sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toBottomOf="@id/textScoreA"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnIncrement1B" />
-
-    <Button
-        android:id="@+id/btnIncrement3A"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="+3"
-        android:textSize="20sp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/btnIncrement1A"
-        app:layout_constraintStart_toStartOf="@id/btnIncrement1A"
-        app:layout_constraintEnd_toEndOf="@id/btnIncrement1A" />
 
     <TextView
         android:id="@+id/TeamB"
@@ -81,16 +58,42 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textScoreAB"
+        android:id="@+id/textScoreB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="40sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/TeamB"
         app:layout_constraintStart_toStartOf="@id/TeamB"
         app:layout_constraintEnd_toEndOf="@id/TeamB" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#D32F2F"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/textScoreA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnIncrement1A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:textSize="20sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnIncrement1B" />
 
     <Button
         android:id="@+id/btnIncrement1B"
@@ -98,11 +101,22 @@
         android:layout_height="wrap_content"
         android:text="+1"
         android:textSize="20sp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintTop_toBottomOf="@id/textScoreAB"
+        app:layout_constraintTop_toBottomOf="@id/tvStatus"
         app:layout_constraintStart_toEndOf="@id/btnIncrement1A"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnIncrement3A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+3"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnIncrement1A"
+        app:layout_constraintStart_toStartOf="@id/btnIncrement1A"
+        app:layout_constraintEnd_toEndOf="@id/btnIncrement1A" />
 
     <Button
         android:id="@+id/btnIncrement3B"
@@ -117,13 +131,13 @@
 
     <Button
         android:id="@+id/btnReset"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Reset"
-        app:layout_constraintTop_toBottomOf="@id/btnIncrement3B"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnIncrement3A"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
